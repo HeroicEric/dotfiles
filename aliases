@@ -1,0 +1,25 @@
+# Vundle
+alias vundle='vim -u ~/.vimrc.bundles +BundleInstall +qa'
+
+# Shortcuts
+alias notes='~/dropbox/notes'
+alias snippets='~/library/application\ support/sublime\ text\ 2/packages/user/snippity_snips/'
+alias sbox="~/Dropbox/launch_academy/sandbox"
+alias box="~/Dropbox"
+alias dotfiles="~/.dotfiles"
+
+# Rails
+alias migrate="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
+
+# Git
+alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
+alias -g superlog="log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
+alias -g poop=pop
+
+# ZSH
+alias reload="source ~/.zshrc"
+
+# Misc
+alias slime='open -a "/applications/sublime text 2.app"'
+alias cpwd='pwd | pbcopy'
+
