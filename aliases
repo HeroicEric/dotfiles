@@ -2,24 +2,39 @@
 alias vundle='vim -u ~/.vimrc.bundles +BundleInstall +qa'
 
 # Shortcuts
-alias notes='~/dropbox/notes'
-alias snippets='~/library/application\ support/sublime\ text\ 2/packages/user/snippity_snips/'
-alias sbox="~/Dropbox/launch_academy/sandbox"
+alias aliases='vim ~/.dotfiles/aliases'
 alias box="~/Dropbox"
 alias dotfiles="~/.dotfiles"
+alias enlight="~/Dropbox/enlight/"
+alias launch="~/Dropbox/launch_academy/"
+alias notes='~/dropbox/notes'
+alias sbox="~/Dropbox/launch_academy/sandbox/"
+alias scode="~/Dropbox/launch_academy/sandbox/student_code"
+alias snippets='~/library/application\ support/sublime\ text\ 2/packages/user/snippity_snips/'
+alias zshrc='vim ~/.dotfiles/zshrc'
+
+# Project Shortcuts
+alias apollo="~/Dropbox/launch_academy/apollo"
+alias hal="~/Dropbox/launch_academy/hal"
 
 # Rails
 alias migrate="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
 
 # Git
+alias git=hub
+
+alias -g browse="hub browse"
 alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
 alias -g superlog="log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
 alias -g poop=pop
+
+#RVM
+alias gemset="rvm gemset use"
 
 # ZSH
 alias reload="source ~/.zshrc"
 
 # Misc
-alias slime='open -a "/applications/sublime text 2.app"'
+alias slime='open -a "/Applications/Sublime Text 2.app"'
+alias gopen='open -a "/Applications/GitHub.app"'
 alias cpwd='pwd | pbcopy'
-
