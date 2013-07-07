@@ -11,7 +11,9 @@ Bundle 'gmarik/vundle'
 Bundle 'croaky/vim-colors-github'
 Bundle 'danro/rename.vim'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc.vim'
 Bundle 'nanki/treetop.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'thoughtbot/vim-rspec'
@@ -29,6 +31,7 @@ Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'xenoterracide/html.vim'
+Bundle 'scrooloose/nerdtree'
 
 filetype on
 
