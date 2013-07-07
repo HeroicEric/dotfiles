@@ -34,4 +34,3 @@ Bundle 'xenoterracide/html.vim'
 Bundle 'scrooloose/nerdtree'
 
 filetype on
-
