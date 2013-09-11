@@ -7,23 +7,22 @@ call vundle#rc()
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-" Define bundles via Github repos
+" Color Schemes
 Bundle 'croaky/vim-colors-github'
+
+" Define bundles via Github repos
 Bundle 'danro/rename.vim'
 Bundle 'kchmck/vim-coffee-script'
-" Bundle 'kien/ctrlp.vim'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimproc.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'nanki/treetop.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'timcharper/textile.vim'
 Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
+Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tsaleh/vim-matchit'
@@ -32,5 +31,11 @@ Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'xenoterracide/html.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/fakeclip'
+Bundle 'rking/ag.vim'
+
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-markdown'
+Bundle 'tristen/vim-sparkup'
 
 filetype on
