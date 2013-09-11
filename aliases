@@ -5,28 +5,45 @@ alias vundle='vim -u ~/.vimrc.bundles +BundleInstall +qa'
 alias aliases='vim ~/.dotfiles/aliases'
 alias box="~/Dropbox"
 alias dotfiles="~/.dotfiles"
-alias enlight="~/Dropbox/enlight/"
-alias launch="~/Dropbox/launch_academy/"
-alias notes='~/dropbox/notes'
-alias sbox="~/Dropbox/launch_academy/sandbox/"
-alias scode="~/Dropbox/launch_academy/sandbox/student_code"
 alias snippets='~/library/application\ support/sublime\ text\ 2/packages/user/snippity_snips/'
 alias zshrc='vim ~/.dotfiles/zshrc'
 
 # Project Shortcuts
 alias apollo="~/Dropbox/launch_academy/apollo"
+alias edu="~/Dropbox/launch_academy/edu"
+alias enlight="~/Dropbox/enlight/"
 alias hal="~/Dropbox/launch_academy/hal"
+alias launch="~/Dropbox/launch_academy/launch_academy"
+alias notes='~/dropbox/notes'
+alias sbox="~/Dropbox/sandbox/"
+alias students="~/Dropbox/launch_academy/students"
+alias discourse="~/Dropbox/launch_academy/discourse"
+alias ember="~/Dropbox/sandbox/ember"
 
 # Rails
+alias CREATE!="rake db:create"
+alias DROP!="rake db:drop"
+alias MIGRATE!="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
 alias migrate="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
-
-# Git
-alias git=hub
+alias SEED!="rake db:seed"
 
 alias -g browse="hub browse"
 alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
 alias -g superlog="log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
 alias -g poop=pop
+alias -g assume_unchanged="update-index --assume-unchanged"
+
+payload() {
+  if [[ $1 == "push" ]] && [[ -n "$2" ]]; then
+    echo "Pushing to $2"
+    command git subtree push --prefix vendor/assets/stylesheets/payload payload $2;
+  elif [[ $1 == "pull" ]] && [[ -n "$2" ]]; then
+    echo "Pulling from $2"
+    command git subtree pull --prefix vendor/assets/stylesheets/payload payload $2 --squash;
+  else
+    echo "Try again. 'payload <push/pull> <branch>'. Branch name should match project name."
+  fi;
+}
 
 #RVM
 alias gemset="rvm gemset use"
@@ -35,6 +52,7 @@ alias gemset="rvm gemset use"
 alias reload="source ~/.zshrc"
 
 # Misc
-alias slime='open -a "/Applications/Sublime Text 2.app"'
-alias gopen='open -a "/Applications/GitHub.app"'
 alias cpwd='pwd | pbcopy'
+alias gopen='open -a "/Applications/GitHub.app"'
+alias marked='open -a "/Applications/Marked.app"'
+alias slime='open -a "/Applications/Sublime Text 2.app"'
