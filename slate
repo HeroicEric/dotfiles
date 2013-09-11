@@ -1,4 +1,4 @@
-config defaultToCurrentScreen true
+#config defaultToCurrentScreen true
 
 # Position Abstraction
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
@@ -6,10 +6,13 @@ alias leftHalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias rightHalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
 alias topHalf push top bar-resize:screenSizeY/2
 alias bottomHalf push bottom bar-resize:screenSizeY/2
+
 alias topLeft corner top-left resize:screenSizeX/2;screenSizeY/2
 alias topRight corner top-right resize:screenSizeX/2;screenSizeY/2
 alias bottomLeft corner bottom-left resize:screenSizeX/2;screenSizeY/2
 alias bottomRight corner bottom-right resize:screenSizeX/2;screenSizeY/2
+
+alias centerHalf move (screenSizeX/2-(screenSizeX/4));screenOriginY screenSizeX/2;screenSizeY
 
 # Window Management Hotkeys
 bind 1:cmd;alt;ctrl ${full}
@@ -17,3 +20,4 @@ bind 2:cmd;alt;ctrl ${leftHalf}
 bind 3:cmd;alt;ctrl ${rightHalf}
 bind 4:cmd;alt;ctrl ${topHalf}
 bind 5:cmd;alt;ctrl ${bottomHalf}
+bind 6:cmd;alt;ctrl ${centerHalf}
