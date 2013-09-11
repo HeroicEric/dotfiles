@@ -19,6 +19,7 @@
   new = green bold
 
 [color "status"]
-  added = yellow
-  changed = green
+  added = green
+  changed = yellow
   untracked = cyan
+  deleted = red bold
