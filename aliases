@@ -4,6 +4,7 @@ alias vundle='vim -u ~/.vimrc.bundles +BundleInstall +qa'
 # Shortcuts
 alias aliases='vim ~/.dotfiles/aliases'
 alias box="~/Dropbox"
+alias buckles='~/.vim/bundle/vim-colors-buckles'
 alias dotfiles="~/.dotfiles"
 alias snippets='~/library/application\ support/sublime\ text\ 2/packages/user/snippity_snips/'
 alias zshrc='vim ~/.dotfiles/zshrc'
@@ -18,7 +19,8 @@ alias notes='~/dropbox/notes'
 alias sbox="~/Dropbox/sandbox/"
 alias students="~/Dropbox/launch_academy/students"
 alias discourse="~/Dropbox/launch_academy/discourse"
-alias ember="~/Dropbox/sandbox/ember"
+alias emb="~/Dropbox/sandbox/ember"
+alias doubt="~/Dropbox/sandbox/ember/doubt"
 
 # Rails
 alias CREATE!="rake db:create"

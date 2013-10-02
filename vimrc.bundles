@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 
 " Color Schemes
 Bundle 'croaky/vim-colors-github'
+Bundle 'HeroicEric/vim-colors-buckles'
 
 " Define bundles via Github repos
 Bundle 'danro/rename.vim'
@@ -33,6 +34,7 @@ Bundle 'xenoterracide/html.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/fakeclip'
 Bundle 'rking/ag.vim'
+Bundle 'altercation/vim-colors-solarized'
 
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-markdown'

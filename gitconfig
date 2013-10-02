@@ -23,3 +23,10 @@
   changed = yellow
   untracked = cyan
   deleted = red bold
+
+[core]
+  excludesfile = /Users/erickelly/.gitignore
+
+[alias]
+  glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+

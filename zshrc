@@ -45,12 +45,14 @@ export EDITOR='vim'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rvm osx ruby rails zeus github)
 
+source $ZSH/oh-my-zsh.sh
+#
 # disable zsh autocorrect
 unsetopt correct_all
 
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

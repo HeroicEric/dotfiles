@@ -57,7 +57,7 @@ set expandtab
 set list listchars=tab:»·,trail:·
 
 " Color scheme
-" colorscheme github
+colorscheme buckles
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -146,3 +146,5 @@ map <leader>k :NERDTreeToggle<cr>
 " Tab Movement
 nnoremap <leader>] :tabnext<CR>
 nnoremap <leader>[ :tabprevious<CR>
+
+map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
