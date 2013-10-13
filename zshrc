@@ -13,6 +13,8 @@ if [ -e "$HOME/.aliases" ]; then
 fi
 
 export EDITOR='vim'
+export VISUAL='vim'
+export GIT_EDITOR='vim'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
