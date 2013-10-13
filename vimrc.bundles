@@ -40,4 +40,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-markdown'
 Bundle 'tristen/vim-sparkup'
 
+Bundle 'mattn/webapi-vim'
+Bundle 'mmozuras/vim-github-comment'
+
 filetype on
