@@ -26,7 +26,7 @@ alias doubt="~/Dropbox/sandbox/ember/doubt"
 alias CREATE!="rake db:create"
 alias DROP!="rake db:drop"
 alias MIGRATE!="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
-alias migrate="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
+alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias SEED!="rake db:seed"
 
 alias -g browse="hub browse"
