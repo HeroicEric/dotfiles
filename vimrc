@@ -149,7 +149,3 @@ nnoremap <leader>[ :tabprevious<CR>
 
 " Show current highlight group
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
-
-" For vim-github-comment
-let g:github_user = 'HeroicEric'
-let g:github_comment_open_browser = 1
