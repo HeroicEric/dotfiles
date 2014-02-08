@@ -18,6 +18,9 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+" Syntax highlightlighting for .es6 modules
+au BufNewFile,BufRead *.es6 set filetype=javascript
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -149,3 +152,7 @@ nnoremap <leader>[ :tabprevious<CR>
 
 " Show current highlight group
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+
+" Vim Github Comment
+let g:github_user = 'heroiceric'
+let g:github_comment_open_browser = 0
