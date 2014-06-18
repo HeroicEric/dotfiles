@@ -10,6 +10,8 @@ Bundle 'gmarik/vundle'
 " Define bundles via Github repos
 Bundle 'croaky/vim-colors-github'
 Bundle 'HeroicEric/vim-colors-buckles'
+Bundle 'reedes/vim-colors-pencil'
+
 Bundle 'danro/rename.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
@@ -25,9 +27,10 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'rking/ag.vim'
-Bundle 'SirVer/ultisnips'
 
-Bundle 'mattn/webapi-vim'
-Bundle 'mmozuras/vim-github-comment'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+
+Bundle 'jnwhiteh/vim-golang'
 
 filetype on

@@ -64,7 +64,7 @@ colorscheme buckles
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-" Allow 
+" Allow
 set clipboard+=unnamed
 
 " Numbers
@@ -143,6 +143,9 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" Ignore things in CtrlP
+let g:ctrlp_custom_ignore = '\v[\/](release|node_modules|development)$'
+
 " NERDTree
 map <leader>k :NERDTreeToggle<cr>
 
@@ -153,6 +156,9 @@ nnoremap <leader>[ :tabprevious<CR>
 " Show current highlight group
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
-" Vim Github Comment
-let g:github_user = 'heroiceric'
-let g:github_comment_open_browser = 0
+let NERDTreeShowHidden=1
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"

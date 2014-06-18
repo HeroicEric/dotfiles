@@ -11,29 +11,25 @@ alias zshrc='vim ~/.dotfiles/zshrc'
 
 # Project Shortcuts
 alias apollo="~/Dropbox/launch_academy/apollo"
+alias discourse="~/Dropbox/launch_academy/discourse"
+alias doubt="~/Dropbox/sandbox/ember/doubt"
 alias edu="~/Dropbox/launch_academy/edu"
+alias emb="~/Dropbox/sandbox/ember"
 alias enlight="~/Dropbox/enlight/"
 alias hal="~/Dropbox/launch_academy/hal"
 alias launch="~/Dropbox/launch_academy/launch_academy"
 alias notes='~/dropbox/notes'
 alias sbox="~/Dropbox/sandbox/"
 alias students="~/Dropbox/launch_academy/students"
-alias discourse="~/Dropbox/launch_academy/discourse"
-alias emb="~/Dropbox/sandbox/ember"
-alias doubt="~/Dropbox/sandbox/ember/doubt"
+alias work="~/Dropbox/work"
 
 # Rails
-alias CREATE!="rake db:create"
-alias DROP!="rake db:drop"
-alias MIGRATE!="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias SEED!="rake db:seed"
 
 alias -g browse="hub browse"
 alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
 alias -g superlog="log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
 alias -g poop=pop
-alias -g assume_unchanged="update-index --assume-unchanged"
 
 payload() {
   if [[ $1 == "push" ]] && [[ -n "$2" ]]; then
@@ -57,4 +53,4 @@ alias reload="source ~/.zshrc"
 alias cpwd='pwd | pbcopy'
 alias gopen='open -a "/Applications/GitHub.app"'
 alias marked='open -a "/Applications/Marked.app"'
-alias slime='open -a "/Applications/Sublime Text 2.app"'
+# alias atom='open -a "/Applications/Atom.app"'
