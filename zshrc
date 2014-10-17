@@ -46,11 +46,6 @@ plugins=(git rvm osx ruby rails zeus github)
 
 source $ZSH/oh-my-zsh.sh
 
-PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
-
-# Customize to your needs...
-# export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin
-
 # # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
