@@ -30,6 +30,6 @@ Bundle 'rking/ag.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'fatih/vim-go'
 
 filetype on
