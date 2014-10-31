@@ -46,6 +46,10 @@ plugins=(git rvm osx ruby rails zeus github)
 
 source $ZSH/oh-my-zsh.sh
 
-# # chruby
+# chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
+
+# nvm
+export NVM_DIR=~/.nvm
+source /usr/local/opt/nvm/nvm.sh
