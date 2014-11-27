@@ -32,5 +32,6 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 
 Bundle 'fatih/vim-go'
+Bundle 'wting/rust.vim'
 
 filetype on
