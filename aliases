@@ -23,6 +23,8 @@ alias sbox="~/Dropbox/sandbox/"
 alias students="~/Dropbox/launch_academy/students"
 alias work="~/Dropbox/work"
 
+alias whatismyip="ifconfig | sed -n 12p"
+
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 
