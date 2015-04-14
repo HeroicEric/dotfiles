@@ -18,9 +18,6 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-" Syntax highlightlighting for .es6 modules
-au BufNewFile,BufRead *.es6 set filetype=javascript
-
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
