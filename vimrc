@@ -60,7 +60,7 @@ set expandtab
 set list listchars=tab:»·,trail:·
 
 " Color scheme
-colorscheme buckles
+colorscheme github
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -134,18 +134,6 @@ nnoremap <C-l> <C-w>l
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
-
-" Ignore things in CtrlP
-let g:ctrlp_custom_ignore = '\v[\/](release|node_modules|development)$'
-
 " NERDTree
 map <leader>k :NERDTreeToggle<cr>
 
@@ -162,3 +150,10 @@ let NERDTreeShowHidden=1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Pick settings
+nnoremap <C-p> :call PickFile()<CR>
+nnoremap <C-s> :call PickFileSplit()<CR>
+nnoremap <C-v> :call PickFileVerticalSplit()<CR>
+nnoremap <C-t> :call PickFileTab()<CR>
+nnoremap <C-b> :call PickBuffer()<CR>

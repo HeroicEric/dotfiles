@@ -4,55 +4,18 @@ alias vundle='vim -u ~/.vimrc.bundles +BundleInstall +qa'
 # Shortcuts
 alias aliases='vim ~/.dotfiles/aliases'
 alias box="~/Dropbox"
-alias buckles='~/.vim/bundle/vim-colors-buckles'
 alias dotfiles="~/.dotfiles"
-alias snippets='~/library/application\ support/sublime\ text\ 2/packages/user/snippity_snips/'
-alias zshrc='vim ~/.dotfiles/zshrc'
-
-# Project Shortcuts
-alias apollo="~/Dropbox/launch_academy/apollo"
-alias discourse="~/Dropbox/launch_academy/discourse"
-alias doubt="~/Dropbox/sandbox/ember/doubt"
-alias edu="~/Dropbox/launch_academy/edu"
-alias emb="~/Dropbox/sandbox/ember"
-alias enlight="~/Dropbox/enlight/"
-alias hal="~/Dropbox/launch_academy/hal"
-alias launch="~/Dropbox/launch_academy/launch_academy"
 alias notes='~/dropbox/notes'
-alias sbox="~/Dropbox/sandbox/"
-alias students="~/Dropbox/launch_academy/students"
-alias work="~/Dropbox/work"
-
-alias whatismyip="ifconfig | sed -n 12p"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 
+# Git
 alias -g browse="hub browse"
-alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
-alias -g superlog="log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
 alias -g poop=pop
-
-payload() {
-  if [[ $1 == "push" ]] && [[ -n "$2" ]]; then
-    echo "Pushing to $2"
-    command git subtree push --prefix vendor/assets/stylesheets/payload payload $2;
-  elif [[ $1 == "pull" ]] && [[ -n "$2" ]]; then
-    echo "Pulling from $2"
-    command git subtree pull --prefix vendor/assets/stylesheets/payload payload $2 --squash;
-  else
-    echo "Try again. 'payload <push/pull> <branch>'. Branch name should match project name."
-  fi;
-}
-
-#RVM
-alias gemset="rvm gemset use"
-
-# ZSH
-alias reload="source ~/.zshrc"
+alias -g superlog="log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
+alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}"'
 
 # Misc
-alias cpwd='pwd | pbcopy'
-alias gopen='open -a "/Applications/GitHub.app"'
-alias marked='open -a "/Applications/Marked.app"'
-# alias atom='open -a "/Applications/Atom.app"'
+alias hit="pbpaste | highlight --syntax=js --style=zenburn --line-numbers -O rtf | pbcopy"
+alias reload="source ~/.zshrc"
