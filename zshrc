@@ -53,3 +53,6 @@ source /usr/local/share/chruby/auto.sh
 # nvm
 export NVM_DIR=~/.nvm
 source /usr/local/opt/nvm/nvm.sh
+
+# use vi mode
+bindkey -v
