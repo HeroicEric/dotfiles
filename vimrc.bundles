@@ -7,10 +7,10 @@ call vundle#rc()
 " Let Vundle manage Vundle
 Plugin 'gmarik/vundle'
 
-" Define bundles via Github repos
-Plugin 'croaky/vim-colors-github'
+" Themes
 Plugin 'HeroicEric/vim-colors-buckles'
-Plugin 'reedes/vim-colors-pencil'
+Plugin 'croaky/vim-colors-github'
+Plugin 'gosukiwi/vim-atom-dark'
 
 " Highlighters
 Plugin 'elixir-lang/vim-elixir'
