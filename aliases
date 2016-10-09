@@ -19,3 +19,5 @@ alias obranches='for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pre
 # Misc
 alias hit="pbpaste | highlight --syntax=js --style=zenburn --line-numbers -O rtf | pbcopy"
 alias reload="source ~/.zshrc"
+alias nombom="npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm i && bower i"
+alias omgderp="rm -rf $TMPDIR/async-disk-cache"

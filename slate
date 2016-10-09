@@ -14,10 +14,12 @@ alias bottomRight corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
 alias centerHalf move (screenSizeX/2-(screenSizeX/4));screenOriginY screenSizeX/2;screenSizeY
 
+alias slateKeys cmd;alt;ctrl
+
 # Window Management Hotkeys
-bind 1:cmd;alt;ctrl ${full}
-bind 2:cmd;alt;ctrl ${leftHalf}
-bind 3:cmd;alt;ctrl ${rightHalf}
-bind 4:cmd;alt;ctrl ${topHalf}
-bind 5:cmd;alt;ctrl ${bottomHalf}
-bind 6:cmd;alt;ctrl ${centerHalf}
+bind 1:${slateKeys} ${full}
+bind 2:${slateKeys} ${leftHalf}
+bind 3:${slateKeys} ${rightHalf}
+bind 4:${slateKeys} ${topHalf}
+bind 5:${slateKeys} ${bottomHalf}
+bind 6:${slateKeys} ${centerHalf}

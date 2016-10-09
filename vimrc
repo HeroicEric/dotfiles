@@ -57,7 +57,7 @@ set expandtab
 set list listchars=tab:»·,trail:·
 
 " Color scheme
-colorscheme atom-dark-256
+colorscheme nova
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -154,3 +154,16 @@ nnoremap <C-s> :call PickFileSplit()<CR>
 nnoremap <C-v> :call PickFileVerticalSplit()<CR>
 nnoremap <C-t> :call PickFileTab()<CR>
 nnoremap <C-b> :call PickBuffer()<CR>
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" Enable mustache abbreviations
+let g:mustache_abbreviations = 1
+
+" Needed for italics
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
+highlight Comment cterm=italic
+highlight htmlArg cterm=italic
