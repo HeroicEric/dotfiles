@@ -22,3 +22,5 @@ source /usr/local/share/chruby/auto.sh
 # nvm
 export NVM_DIR=~/.nvm
 source /usr/local/opt/nvm/nvm.sh
+
+export PATH="$HOME/.yarn/bin:$PATH"
