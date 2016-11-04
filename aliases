@@ -14,7 +14,7 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias -g browse="hub browse"
 alias -g poop=pop
 alias -g superlog="log --graph --pretty=format:'%cred%h%creset -%c(yellow)%d%creset %s %cgreen(%cr) %c(bold blue)<%an>%creset' --abbrev-commit"
-alias obranches="for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort | awk "{print $2}""
+alias -g obranches="branch --sort=committerdate"
 
 # Misc
 alias barn="yarn install && bower install"
