@@ -1,4 +1,5 @@
-# Credits
-
-Most of what I have so far has been taken from the [thoughtbot
-dotfiles](https://github.com/thoughtbot/dotfiles)
+```
+git clone git@github.com:HeroicEric/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
+```
