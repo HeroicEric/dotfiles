@@ -167,3 +167,6 @@ let &t_ZR="\e[23m"
 
 highlight Comment cterm=italic
 highlight htmlArg cterm=italic
+
+set foldmethod=indent
+set nofoldenable
