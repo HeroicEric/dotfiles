@@ -15,12 +15,10 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-# chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+export PATH="$PATH:`yarn global bin`"
 
-# nvm
-export NVM_DIR=~/.nvm
-source /usr/local/opt/nvm/nvm.sh
+# Haskell
+export PATH="$HOME/Library/Haskell/bin:$PATH"
 
-export PATH="$HOME/.yarn/bin:$PATH"
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
