@@ -20,5 +20,7 @@ export PATH="$PATH:`yarn global bin`"
 # Haskell
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
