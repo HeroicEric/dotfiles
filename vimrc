@@ -138,6 +138,10 @@ map <leader>k :NERDTreeToggle<cr>
 nnoremap <leader>] :tabnext<CR>
 nnoremap <leader>[ :tabprevious<CR>
 
+" Reorder tabs
+nnoremap <leader>{ :tabm -1<CR>
+nnoremap <leader>} :tabm +1<CR>
+
 " Show current highlight group
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
