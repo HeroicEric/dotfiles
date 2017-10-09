@@ -1,5 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
+# can has auth?"
 ZSH_THEME="frisk"
 
 plugins=(git brew chruby)
