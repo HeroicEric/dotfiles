@@ -174,3 +174,6 @@ highlight htmlArg cterm=italic
 
 set foldmethod=indent
 set nofoldenable
+
+" Align GitHub-flavored Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>

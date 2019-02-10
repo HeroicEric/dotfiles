@@ -6,6 +6,7 @@ alias aliases="vim ~/.dotfiles/aliases"
 alias box="~/Dropbox"
 alias dotfiles="~/.dotfiles"
 alias notes="~/dropbox/notes"
+alias drafts="cd ~/drafts && vim ."
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
@@ -22,3 +23,4 @@ alias hit="pbpaste | highlight --syntax=js --style=zenburn --line-numbers -O rtf
 alias nombom="npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm i && bower i"
 alias omgderp="rm -rf $TMPDIR/async-disk-cache"
 alias reload="source ~/.zshrc"
+alias fixmycamera="sudo killall VDCAssistant && killall AppleCameraAssistant"

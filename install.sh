@@ -9,10 +9,11 @@ for name in *; do
   else
     if [ "$name" != 'install.sh' ] && [ "$name" != 'README.md' ]; then
       echo "Creating $target"
-      ln -s "$PWD/$name" "$target"
+      ln -sfn "$PWD/$name" "$target"
     fi
   fi
 done
 
+rm -rf ~/.vim/bundle/vundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 vim -u ~/.vimrc.bundles +BundleInstall +qa
