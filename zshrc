@@ -2,7 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="frisk"
 
-plugins=(git brew chruby)
+plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -18,7 +18,10 @@ fi
 export PATH="$PATH:`yarn global bin`"
 
 # Haskell
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+# export PATH="$HOME/Library/Haskell/bin:$PATH"
+
+# Enable IEx shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 

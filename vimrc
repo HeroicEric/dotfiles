@@ -58,6 +58,10 @@ set list listchars=tab:»·,trail:·
 
 " Color scheme
 colorscheme nova
+
+" set background=light
+" colorscheme cosmic_latte
+
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -177,3 +181,5 @@ set nofoldenable
 
 " Align GitHub-flavored Markdown tables
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+let g:markdown_fenced_languages = ['css', 'elixir', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'typescript=javascript', 'ruby', 'sass', 'xml']
