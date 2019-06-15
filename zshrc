@@ -2,7 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="frisk"
 
-plugins=(git brew)
+plugins=(asdf brew git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,5 +25,4 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+. $(brew --prefix asdf)/asdf.sh
