@@ -1,0 +1,41 @@
+call plug#begin('~/.vim/plugged')
+
+" Themes
+Plug 'HeroicEric/vim-colors-buckles'
+Plug 'arcticicestudio/nord-vim'
+Plug 'cormacrelf/vim-colors-github'
+Plug 'gosukiwi/vim-atom-dark'
+Plug 'nightsense/cosmic_latte'
+Plug 'trevordmiller/nova-vim'
+
+" Highlighters
+Plug 'elixir-editors/vim-elixir'
+Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'wting/rust.vim'
+
+" Misc
+" Plug 'MobiusHorizons/fugitive-stash.vim'
+" Plug 'rking/ag.vim'
+" Plug 'tpope/vim-bundler'
+Plug 'HeroicEric/vim-tabline'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdtree'
+Plug 'thoughtbot/pick.vim'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/tComment'
+Plug 'zerowidth/vim-copy-as-rtf'
+
+" Trial
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()

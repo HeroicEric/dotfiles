@@ -6,9 +6,9 @@ plugins=(asdf brew git)
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR='vim'
-export VISUAL='vim'
-export GIT_EDITOR='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
+export GIT_EDITOR='nvim'
 
 # Aliases
 if [ -e "$HOME/.aliases" ]; then

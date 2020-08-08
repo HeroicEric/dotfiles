@@ -2,11 +2,11 @@
 alias vundle="vim -u ~/.vimrc.bundles +BundleInstall +qa"
 
 # Shortcuts
-alias aliases="vim ~/.dotfiles/aliases"
+alias aliases="nvim ~/.dotfiles/aliases"
 alias box="~/Dropbox"
 alias dotfiles="~/.dotfiles"
 alias notes="~/dropbox/notes"
-alias drafts="cd ~/drafts && vim ."
+alias drafts="cd ~/drafts && nvim ."
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"

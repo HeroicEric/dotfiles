@@ -18,11 +18,14 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+if filereadable(expand("~/.vimrc.plugs"))
+  source ~/.vimrc.plugs
 endif
 
 filetype plugin indent on
+
+" https://github.com/neoclide/coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 augroup vimrcEx
   autocmd!
@@ -40,6 +43,7 @@ augroup vimrcEx
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile *.hbs set filetype=handlebars
 
   " Enable spellchecking for Markdown
   autocmd BufRead,BufNewFile *.md setlocal spell
@@ -57,7 +61,7 @@ set expandtab
 set list listchars=tab:»·,trail:·
 
 " Color scheme
-colorscheme nova
+colorscheme nord
 
 " set background=light
 " colorscheme cosmic_latte
@@ -99,12 +103,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
-" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
-" Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags .<CR>
-
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
@@ -114,13 +112,10 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" vim-rspec mappings
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
+
+let g:fzf_command_prefix = 'Fzf'
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -131,9 +126,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-
-" configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
 
 " NERDTree
 map <leader>k :NERDTreeToggle<cr>
@@ -151,23 +143,8 @@ map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 
 let NERDTreeShowHidden=1
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " Pick settings
-nnoremap <C-p> :call PickFile()<CR>
-nnoremap <C-s> :call PickFileSplit()<CR>
-nnoremap <C-v> :call PickFileVerticalSplit()<CR>
-nnoremap <C-t> :call PickFileTab()<CR>
-nnoremap <C-b> :call PickBuffer()<CR>
-
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-
-" Enable mustache abbreviations
-let g:mustache_abbreviations = 1
+nnoremap <leader>p :FzfGFiles --cached --exclude-standard --others<CR>
 
 " Needed for italics
 let &t_ZH="\e[3m"
